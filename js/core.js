@@ -70,7 +70,7 @@ if(!window.HashChangeEvent)(function(){
               var ext = 'html';
               if(ext_tmp.length > 1)
                   ext = ext_tmp[ext_tmp.length -1];
-              
+
               var urlpath = ((ext == 'html')?"https://raw.githubusercontent.com":host_static) + '/blog/' + ext_tmp[0] + '.' + ext;
               console.log(urlpath);
               pages.push([urlpath, el, ext]);
