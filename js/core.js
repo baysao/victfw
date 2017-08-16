@@ -32,7 +32,7 @@ var host_static = 'https://cdn.rawgit.com/baysao/victfw/master';
           loadjscssfile(urlpath.replace(new RegExp('\.' + ext + '$'), '.js'), 'js');
           loadjscssfile(urlpath.replace(new RegExp('\.' + ext + '$'), '.css'), 'css');
           callback && callback();
-      })
+      }, true, false)
   }
 //let this snippet run before your hashchange event binding code
 if(!window.HashChangeEvent)(function(){
