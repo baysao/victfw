@@ -1,6 +1,7 @@
+typeof window.victfw === undefined && window.victfw = {};
 var jscssloaded = {};
 //var host_static = 'https://cdn.rawgit.com/baysao/victfw/master';
-var host_static = 'http://st.gory.me/victfw';
+var host_static = window.victfw.host_static || 'http://st.gory.me/victfw';
   function loadjscssfile(filename, filetype){
       if(jscssloaded[filename]) return;
       if (filetype=="js"){ //if filename is a external JavaScript file
