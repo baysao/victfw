@@ -25,7 +25,7 @@ var host_static = 'https://cdn.rawgit.com/baysao/victfw/master';
       
   }
   function render(urlpath, el, ext, config, callback){
-      $().get(urlpath, function(text, status){
+      $({callback: "?"}}).get(urlpath, function(text, status{
           if(status != 200) return;
           var txt = transform[ext](text);
           morphdom(document.querySelector('#' + el),'<div id="' + el + '">' + transform[ext](text) + "</div>");
