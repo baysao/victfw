@@ -1,4 +1,5 @@
-  var jscssloaded = {};
+var jscssloaded = {};
+var host_static = 'http://rawgit.com/baysao/victfw/master';
   function loadjscssfile(filename, filetype){
       if(jscssloaded[filename]) return;
       if (filetype=="js"){ //if filename is a external JavaScript file
@@ -69,7 +70,7 @@ if(!window.HashChangeEvent)(function(){
               var ext = 'html';
               if(ext_tmp.length > 1)
                   ext = ext_tmp[ext_tmp.length -1];
-              var urlpath = './blog/' + ext_tmp[0] + '.' + ext;
+              var urlpath = host_static + '/blog/' + ext_tmp[0] + '.' + ext;
               console.log(urlpath);
               pages.push([urlpath, el, ext]);
           }
