@@ -1,5 +1,6 @@
 var jscssloaded = {};
-var host_static = 'https://cdn.rawgit.com/baysao/victfw/master';
+//var host_static = 'https://cdn.rawgit.com/baysao/victfw/master';
+var host_static = 'https://rawgit.com/baysao/victfw/master';
   function loadjscssfile(filename, filetype){
       if(jscssloaded[filename]) return;
       if (filetype=="js"){ //if filename is a external JavaScript file
