@@ -26,14 +26,14 @@ var host_static = 'http://st.gory.me/victfw';
       
   }
   function render(urlpath, el, ext, config, callback){
-      $({callback: "?"}).get(urlpath, function(text, status){
+      $().get(urlpath, function(text, status){
           if(status != 200) return;
           var txt = transform[ext](text);
           morphdom(document.querySelector('#' + el),'<div id="' + el + '">' + transform[ext](text) + "</div>");
           loadjscssfile(urlpath.replace(new RegExp('\.' + ext + '$'), '.js'), 'js');
           loadjscssfile(urlpath.replace(new RegExp('\.' + ext + '$'), '.css'), 'css');
           callback && callback();
-      }, true, false)
+      })
   }
 //let this snippet run before your hashchange event binding code
 if(!window.HashChangeEvent)(function(){
