@@ -13,6 +13,9 @@
     /**
      * Get template function by name.
      */
+    doT.isCache = function(name){
+        return templates[name]?true:false;
+    }
     doT.tmpl = function (name, config, def) {
         if (!templates[name])
             throw new Error("template \"" + name + "\" not found!");
